@@ -6,6 +6,10 @@
 
 Library to generate/retrieve tokens to communicate with the Daikin cloud and to control Daikin devices via the cloud adapters like (BRP069C4x).
 
+## Disclaimer
+**All product and company names or logos are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them or any associated subsidiaries! This personal project is maintained in spare time and has no business goal.**
+**Daikin is a trademark of DAIKIN INDUSTRIES, LTD.**
+
 ## Description
 The newer Daikin devices sold since 2020 contain a newer Wifi Adapter (e.g. BRP069C4x) which only connects to the Daikin Cloud and is no longer reachable locally. These devices are only controllable with the Daikin Onecta App.
 
@@ -60,6 +64,8 @@ Alternatively execute
 ## Code-Usage example
 See example folder, check the settings (add your own IP at minimum!) and start it with `node example.js`.
 
+When getting or setting data you need to look at the complete data structure returned by the device. SO best go a "getData()" and check the structure. The getData/setData parameters mirror the structure. In fact you awlways eed to provide the first two levels, maybe a "path style third level".
+
 ## Issue reporting and enhancements
 * Create Issues here in Github
 * Provide PRs for actual changes and enhancements to code or documentation!
@@ -73,6 +79,12 @@ See example folder, check the settings (add your own IP at minimum!) and start i
 
 
 ## Changelog:
+### 1.0.3 (2022-06-03)
+* (Apollon77) Fix potential crash case
+
+### 1.0.2 (2022-05-27)
+* (Apollon77) Fix potential crash case
+
 ### 1.0.1 (2022-05-23)
 * (Apollon77) Optimize login handling
 
@@ -99,6 +111,3 @@ See example folder, check the settings (add your own IP at minimum!) and start i
 
 ### 0.0.x
 * (Apollon77) Initial version
-
-## Disclaimer
-**Daikin is a trademark of DAIKIN INDUSTRIES, LTD. I am in no way endorsed by or affiliated with DAIKIN INDUSTRIES, LTD., or any associated subsidiaries, logos or trademarks. This personal project is maintained in spare time.**
